@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(CMakeSFMLProject LANGUAGES CXX)
 
+add_definitions(-DSOURCE_DIR="${CMAKE_SOURCE_DIR}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 

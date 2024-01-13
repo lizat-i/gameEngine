@@ -1,11 +1,15 @@
 #include <SFML/Graphics.hpp>
+
 #include "EntityManager.hpp"
-#include <filesystem>
-#include <iostream>
+#include "inputHandler.hpp"
+
 
 int main()
 {
     EntityManager m_EntityManager;
+    inputHandler inputObject("/input/input.txt");
+    inputObject.readFile();
+
 
     /*
 

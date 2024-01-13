@@ -1,7 +1,19 @@
 #include <SFML/Graphics.hpp>
+#include "EntityManager.hpp"
+#include <filesystem>
+#include <iostream>
 
 int main()
 {
+    EntityManager m_EntityManager;
+    // buildEntities(m_EntityManager,m_EntityManager);
+    try {
+        std::filesystem::path currentPath = std::filesystem::current_path();
+        std::cout << "Current working directory: " << currentPath << std::endl;
+    } catch (const std::filesystem::filesystem_error& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+
     auto window = sf::RenderWindow{ { 1920u, 1080u }, "CMake SFML Project" };
     window.setFramerateLimit(144);
 
